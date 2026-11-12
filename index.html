@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orvia · Webs y vídeos que traen clientes a tu negocio</title>
+<meta name="description" content="Orvia diseña webs y gestiona redes sociales para negocios locales: clínicas, reformas, estética, despachos. Pide una auditoría gratuita de tu web en 24 horas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7FA;
+  --white:#FFFFFF;
+  --ink:#141A33;
+  --muted:#5B6275;
+  --line:#DCE1EA;
+  --cobalt:#2D45F0;
+  --cobalt-dark:#1E31C4;
+  --mint:#CFF3E0;
+  --amber:#F5A524;
+  --green:#178A5C;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{font-family:var(--display);font-weight:800;font-size:1.6rem;letter-spacing:-.03em;text-decoration:none;display:flex;align-items:center;gap:.45rem}
+.logo i{display:inline-block;width:.8em;height:.8em;border-radius:50%;border:.17em solid var(--cobalt);position:relative}
+.logo i::after{content:"";position:absolute;width:.26em;height:.26em;border-radius:50%;background:var(--cobalt);top:-.2em;right:-.12em}
+.top nav{display:flex;gap:26px;align-items:center}
+.top nav a{text-decoration:none;color:var(--muted);font-size:.98rem}
+.top nav a:hover{color:var(--ink)}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;border-radius:999px;padding:.85em 1.45em;background:var(--cobalt);color:#fff;transition:background .15s}
+.btn:hover{background:var(--cobalt-dark)}
+.btn.small{padding:.6em 1.1em;font-size:.95rem;color:#fff}
+@media (max-width:760px){.top nav a:not(.btn){display:none}}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center;padding:40px 0 96px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.02;letter-spacing:-.035em;margin:0 0 22px}
+.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:30em;margin:0 0 30px}
+.hero .actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.hero .actions small{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding-bottom:72px}}
+
+/* Before/after browser */
+.demo{position:relative}
+.switch{display:inline-flex;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:14px}
+.switch button{font-family:var(--display);font-weight:700;font-size:.95rem;border:0;background:transparent;color:var(--muted);padding:.5em 1.1em;border-radius:999px;cursor:pointer}
+.switch button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.browser{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,26,51,.35)}
+.bar{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line);background:#EEF1F6}
+.bar span{width:10px;height:10px;border-radius:50%;background:#C9CFDA}
+.url{margin-left:10px;flex:1;background:var(--white);border-radius:6px;padding:4px 10px;font-size:.8rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.screen{position:relative;height:380px}
+.state{position:absolute;inset:0;transition:opacity .5s ease}
+.state[hidden]{display:block;opacity:0;pointer-events:none}
+
+/* "Antes" site */
+.old{background:#F0EFE6;font-family:"Times New Roman",Times,serif;color:#333;padding:18px 22px}
+.old .ohead{background:#3C5A8A;color:#fff;padding:10px 12px;font-size:1.25rem;font-weight:bold}
+.old .omenu{font-size:.78rem;color:#1a0dab;text-decoration:underline;margin:8px 0 14px;word-spacing:6px}
+.old .obody{display:flex;gap:14px}
+.old .ophoto{width:110px;height:84px;background:repeating-linear-gradient(45deg,#cfcabb 0 6px,#ddd8ca 6px 12px);flex:none}
+.old p{margin:0;font-size:.8rem;line-height:1.35}
+.old .ofoot{position:absolute;bottom:14px;left:22px;font-size:.72rem;color:#777}
+.pin{position:absolute;display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:.82rem;font-weight:700;color:var(--ink);background:var(--white);border:2px solid var(--amber);border-radius:999px;padding:4px 11px 4px 5px;box-shadow:0 6px 16px -8px rgba(0,0,0,.35)}
+.pin b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--amber);color:var(--ink);font-size:.75rem}
+
+/* "Después" site */
+.new{background:var(--white);font-family:var(--display);padding:0}
+.new .nhead{display:flex;justify-content:space-between;align-items:center;padding:16px 22px}
+.new .nlogo{font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
+.new .ncta{background:var(--green);color:#fff;font-weight:700;font-size:.8rem;padding:.5em .95em;border-radius:999px}
+.new .nhero{margin:4px 22px 0;border-radius:12px;background:linear-gradient(120deg,#DFF5EA,#EAF0FF);padding:26px 22px;min-height:200px;position:relative;overflow:hidden}
+.new .nhero h4{margin:0 0 8px;font-size:1.55rem;line-height:1.08;letter-spacing:-.02em;max-width:12em}
+.new .nhero p{margin:0 0 16px;font-family:var(--body);font-size:.85rem;color:var(--muted);max-width:22em}
+.new .nbtns{display:flex;gap:8px;flex-wrap:wrap}
+.new .nbtns span{font-size:.8rem;font-weight:700;padding:.55em 1em;border-radius:999px;background:var(--ink);color:#fff}
+.new .nbtns span+span{background:var(--white);color:var(--ink)}
+.new .nrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 22px}
+.new .nrow div{border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.78rem;font-weight:700}
+.new .nrow small{display:block;font-family:var(--body);font-weight:400;color:var(--muted)}
+.stars{color:#E8A317;letter-spacing:1px}
+.ok{position:absolute;display:flex;align-items:center;gap:7px;font-family:var(--body);font-size:.82rem;font-weight:700;background:var(--white);border:2px solid var(--green);border-radius:999px;padding:4px 11px 4px 5px;box-shadow:0 6px 16px -8px rgba(0,0,0,.3)}
+.ok b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--green);color:#fff;font-size:.72rem}
+.demo-note{font-size:.85rem;color:var(--muted);margin:12px 2px 0}
+@media (max-width:520px){
+  .screen{height:420px}
+  .old .obody{flex-direction:column}
+  .new .nrow{grid-template-columns:1fr 1fr}
+  .new .nrow div:last-child{display:none}
+  .pin,.ok{font-size:.74rem}
+  .okdom{top:auto!important;bottom:20px;left:22px;right:auto!important}
+}
+
+/* Sections */
+section{padding:88px 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;max-width:18em}
+.intro{color:var(--muted);font-size:1.15rem;max-width:36em;margin:0 0 44px}
+
+/* Problems */
+.problems{background:var(--ink);color:#fff}
+.problems .intro{color:#B9BFD3}
+.plist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pitem{display:flex;flex-direction:column;justify-content:flex-start;font:inherit;text-align:left;cursor:pointer;color:#fff;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.14);border-radius:16px;padding:18px 18px 18px 58px;position:relative;transition:background .15s,border-color .15s}
+.pitem::before{content:"";position:absolute;left:18px;top:21px;width:24px;height:24px;border-radius:7px;border:2px solid rgba(255,255,255,.4)}
+.pitem:hover{border-color:rgba(255,255,255,.35)}
+.pitem[aria-pressed="true"]{background:rgba(245,165,36,.12);border-color:var(--amber)}
+.pitem[aria-pressed="true"]::before{background:var(--amber);border-color:var(--amber)}
+.pitem[aria-pressed="true"]::after{content:"";position:absolute;left:26px;top:26px;width:6px;height:11px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.pitem strong{font-family:var(--display);font-size:1.18rem;display:block;margin-bottom:2px}
+.pitem span{color:#B9BFD3}
+.verdict{margin-top:30px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.meter{width:200px;height:10px;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:var(--amber);border-radius:99px;transition:width .35s ease}
+.verdict p{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:700;flex:1;min-width:240px}
+@media (max-width:760px){.plist{grid-template-columns:1fr}}
+
+/* Services */
+.services{display:grid;grid-template-columns:1.25fr 1fr;gap:20px}
+.svc{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:30px}
+.svc h3{font-family:var(--display);font-size:1.45rem;letter-spacing:-.02em;margin:0 0 8px}
+.svc p{margin:0;color:var(--muted)}
+.svc.main{grid-row:span 2;background:var(--cobalt);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.svc.main p{color:#DCE2FF}
+.svc.main ul{margin:18px 0 0;padding:0;list-style:none}
+.svc.main li{padding:9px 0;border-top:1px solid rgba(255,255,255,.22)}
+.svc .tag{display:inline-block;font-size:.85rem;background:var(--mint);color:var(--green);font-weight:700;border-radius:999px;padding:.2em .75em;margin-bottom:12px}
+.svc-side{display:grid;gap:20px}
+@media (max-width:860px){.services{grid-template-columns:1fr}.svc.main{grid-row:auto}}
+
+/* Samples: comparator */
+.sectors{display:inline-flex;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:18px;flex-wrap:wrap}
+.sectors button{font-family:var(--display);font-weight:700;font-size:1rem;border:0;background:transparent;color:var(--muted);padding:.55em 1.2em;border-radius:999px;cursor:pointer}
+.sectors button[aria-selected="true"]{background:var(--cobalt);color:#fff}
+.compare{--pos:50%;position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 30px 60px -36px rgba(20,26,51,.45);touch-action:pan-y;user-select:none;cursor:ew-resize}
+.cview{position:absolute;inset:0;overflow:hidden}
+.cview.old{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.cview iframe{border:0;transform-origin:0 0;pointer-events:none;background:#fff;display:block}
+.ctag{position:absolute;bottom:14px;z-index:3;font-family:var(--display);font-weight:700;font-size:.9rem;padding:.35em .85em;border-radius:999px;pointer-events:none}
+.ctag.l{left:14px;background:var(--amber);color:var(--ink)}
+.ctag.r{right:14px;background:var(--cobalt);color:#fff}
+.handle{position:absolute;top:0;bottom:0;left:var(--pos);width:4px;margin-left:-2px;background:#fff;z-index:4;box-shadow:0 0 0 1px rgba(20,26,51,.15)}
+.handle span{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:var(--ink);box-shadow:0 8px 20px -6px rgba(0,0,0,.5)}
+.handle span::before,.handle span::after{content:"";position:absolute;top:17px;border:6px solid transparent}
+.handle span::before{left:7px;border-right-color:#fff}
+.handle span::after{right:7px;border-left-color:#fff}
+.handle:focus-visible{outline:none}
+.handle:focus-visible span{outline:3px solid var(--amber);outline-offset:3px}
+.compare.hint .handle,.compare.hint .cview.old{transition:left .6s ease,clip-path .6s ease}
+.clinks{display:flex;gap:20px;align-items:center;margin-top:20px;flex-wrap:wrap}
+.clinks a:not(.btn){color:var(--muted)}
+.fine{color:var(--muted);font-size:.95rem;margin-top:14px}
+
+/* Steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--display);font-weight:800;font-size:1.2rem;margin-bottom:18px}
+.steps h3{font-family:var(--display);font-size:1.3rem;margin:0 0 6px;letter-spacing:-.02em}
+.steps p{margin:0;color:var(--muted)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+
+/* Audit form */
+.audit{background:var(--mint)}
+.audit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.audit .intro{color:#2D4A3E}
+.audit ul{margin:0;padding:0 0 0 1.1em;color:#2D4A3E}
+.audit li{margin:6px 0}
+form{background:var(--white);border-radius:20px;padding:30px;display:grid;gap:16px;box-shadow:0 30px 60px -40px rgba(20,26,51,.45)}
+label{font-weight:700;font-size:.98rem;display:grid;gap:6px}
+label>span{display:block}
+label small{font-weight:400;color:var(--muted)}
+input,textarea{font:inherit;font-weight:400;color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:.75em .9em;background:var(--paper);width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--cobalt);background:#fff}
+textarea{min-height:96px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn{justify-self:start}
+form .legal{font-size:.85rem;color:var(--muted);margin:0}
+@media (max-width:860px){.audit-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:520px){.row2{grid-template-columns:1fr}form{padding:22px}}
+
+.needs{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.needs legend{font-weight:700;font-size:.98rem;margin-bottom:8px;padding:0}
+.need{display:inline-block;cursor:pointer}
+.need input{position:absolute;opacity:0;width:1px;height:1px}
+.need span{display:inline-block;font-weight:400;font-size:.95rem;border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:.45em 1em}
+.need input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.need input:focus-visible+span{outline:3px solid var(--cobalt);outline-offset:2px}
+
+/* Footer */
+footer{padding:44px 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#" aria-label="Orvia, inicio"><i></i>orvia</a>
+    <nav aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#muestras">Muestras</a>
+      <a href="#como">Cómo trabajamos</a>
+      <a class="btn small" href="#auditoria">Auditoría gratis</a>
+    </nav>
+  </header>
+
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Tu negocio es bueno. Que se note en internet.</h1>
+      <p class="lead">Diseñamos webs y vídeos para negocios locales que tienen clientes contentos pero una web antigua, escondida o inexistente. Lo justo para que te encuentren y te elijan.</p>
+      <div class="actions">
+        <a class="btn" href="#auditoria">Quiero mi auditoría gratis</a>
+        <small>Te respondemos en 24 horas, sin compromiso.</small>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="switch" role="group" aria-label="Comparar la web antes y después">
+        <button type="button" id="bAntes" aria-pressed="true">Antes</button>
+        <button type="button" id="bDespues" aria-pressed="false">Con Orvia</button>
+      </div>
+      <div class="browser">
+        <div class="bar" aria-hidden="true"><span></span><span></span><span></span><div class="url" id="url">clinicadelbarrio.wixsite.com/inicio-2016</div></div>
+        <div class="screen">
+          <div class="state old" id="sAntes">
+            <div class="ohead">Clinica del Barrio - Bienvenidos</div>
+            <div class="omenu">Inicio | Quienes somos | Servicios | Galeria | Contacto</div>
+            <div class="obody">
+              <div class="ophoto"></div>
+              <p>Bienvenidos a nuestra pagina web. Somos un centro con mas de 15 años de experiencia ofreciendo nuestros servicios a todos nuestros clientes. Para cualquier consulta no dude en llamarnos por telefono en horario de oficina...</p>
+            </div>
+            <div class="ofoot">© 2016 Todos los derechos reservados</div>
+            <div class="pin" style="top:12px;right:14px"><b>1</b>Dirección gratuita</div>
+            <div class="pin" style="top:150px;right:18px"><b>2</b>No hay botón de cita</div>
+            <div class="pin" style="bottom:46px;left:22px"><b>3</b>Sin tocar desde 2016</div>
+            <div class="pin" style="bottom:12px;right:14px"><b>4</b>No se ven las reseñas</div>
+          </div>
+          <div class="state new" id="sDespues" hidden>
+            <div class="nhead"><span class="nlogo">Clínica del Barrio</span><span class="ncta">Pedir cita</span></div>
+            <div class="nhero">
+              <h4>Fisioterapia cerca de casa, sin esperas.</h4>
+              <p>Reserva online en un minuto. Más de 15 años cuidando a tu barrio.</p>
+              <div class="nbtns"><span>Reservar ahora</span><span>Ver tratamientos</span></div>
+            </div>
+            <div class="nrow">
+              <div><span class="stars">★★★★★</span><small>Reseñas visibles</small></div>
+              <div>Tratamientos<small>Explicados claro</small></div>
+              <div>Cómo llegar<small>Mapa y horario</small></div>
+            </div>
+            <div class="ok okdom" style="top:178px;right:14px"><b>✓</b>Tu dominio</div>
+            <div class="ok" style="top:50px;right:14px"><b>✓</b>Cita en un clic</div>
+          </div>
+        </div>
+      </div>
+      <p class="demo-note">Ejemplo ilustrativo de un negocio inventado.</p>
+    </div>
+  </div>
+  </main>
+</div>
+
+<section class="problems" aria-labelledby="t-problemas">
+  <div class="wrap">
+    <h2 id="t-problemas">¿Tu web pasa la prueba?</h2>
+    <p class="intro">Son los fallos que más vemos en negocios que trabajan bien. Toca los que te pasan a ti.</p>
+    <div class="plist" role="group" aria-label="Fallos de tu web">
+      <button type="button" class="pitem" aria-pressed="false"><strong>No tengo web, o no aparece en Google</strong><span>Solo salgo en directorios, al lado de toda mi competencia.</span></button>
+      <button type="button" class="pitem" aria-pressed="false"><strong>Mi web lleva años sin tocarse</strong><span>En el pie todavía pone 2017, o similar.</span></button>
+      <button type="button" class="pitem" aria-pressed="false"><strong>Es una plantilla gratuita</strong><span>Wix o WordPress gratis, con su anuncio encima.</span></button>
+      <button type="button" class="pitem" aria-pressed="false"><strong>Para pedir cita hay que llamar</strong><span>Quien busca de noche reserva en otro sitio.</span></button>
+      <button type="button" class="pitem" aria-pressed="false"><strong>Mis reseñas no se ven en la web</strong><span>Lo mejor que tengo no aparece por ningún lado.</span></button>
+      <button type="button" class="pitem" aria-pressed="false"><strong>No se ve bien en el móvil</strong><span>Hay que hacer zoom o algo no carga.</span></button>
+    </div>
+    <div class="verdict" aria-live="polite">
+      <div class="meter" aria-hidden="true"><i id="meterFill"></i></div>
+      <p id="verdictTxt">Marca los que te pasan y te decimos cómo estás.</p>
+      <a class="btn" id="verdictBtn" href="#auditoria" hidden>Pedir mi auditoría gratis</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" aria-labelledby="t-servicios">
+  <div class="wrap">
+    <h2 id="t-servicios">Qué hacemos</h2>
+    <p class="intro">Cada negocio es distinto, así que no trabajamos con paquetes cerrados. Primero miramos qué te falta y después te damos un precio cerrado.</p>
+    <div class="services">
+      <article class="svc main">
+        <div>
+          <h3>Diseño web</h3>
+          <p>Una web nueva o el rediseño de la que tienes, pensada para que quien entra acabe llamando o reservando.</p>
+          <ul>
+            <li>Adaptada al móvil y rápida</li>
+            <li>Reserva de cita o formulario de presupuesto</li>
+            <li>Tus reseñas y trabajos bien visibles</li>
+            <li>Preparada para salir en Google</li>
+          </ul>
+        </div>
+        <a class="btn" style="background:#fff;color:var(--cobalt);justify-self:start;align-self:flex-start" href="#auditoria">Revisar mi web gratis</a>
+      </article>
+      <div class="svc-side">
+        <article class="svc">
+          <span class="tag">En Barcelona</span>
+          <h3>Vídeos y redes sociales</h3>
+          <p>Vamos a tu negocio, grabamos vídeos cortos y llevamos tu Instagram para que los clientes vean cómo trabajas.</p>
+        </article>
+        <article class="svc">
+          <h3>Google Maps y reseñas</h3>
+          <p>Ponemos al día tu ficha de Google y te ayudamos a que los clientes contentos dejen su opinión.</p>
+        </article>
+        <article class="svc">
+          <h3>Mantenimiento</h3>
+          <p>Cambios, seguridad y copias de la web cada mes, para que nunca se quede antigua ni se caiga.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="muestras" aria-labelledby="t-muestras" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="t-muestras">La misma empresa, dos webs</h2>
+    <p class="intro">A la izquierda, la web típica que vemos cada día: misma plantilla para todos. A la derecha, la que diseñamos para su sector. Arrastra la barra para comparar.</p>
+    <div class="sectors" role="tablist" aria-label="Sector">
+      <button role="tab" aria-selected="true" data-s="fisio">Fisioterapia</button>
+      <button role="tab" aria-selected="false" data-s="reformas">Reformas</button>
+      <button role="tab" aria-selected="false" data-s="estetica">Estética</button>
+    </div>
+    <div class="compare" id="compare">
+      <div class="cview new"><iframe id="fNew" title="Diseño de Orvia" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+      <div class="cview old" id="clipOld"><iframe id="fOld" title="Web típica antigua" scrolling="no" tabindex="-1" loading="lazy"></iframe></div>
+      <span class="ctag l">Web típica</span><span class="ctag r">Diseño Orvia</span>
+      <div class="handle" id="handle" role="slider" tabindex="0" aria-label="Comparar web típica y diseño Orvia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span></span></div>
+    </div>
+    <div class="clinks">
+      <a href="demos/antigua.html?s=fisio" id="lOld" target="_blank" rel="noopener">Abrir la web típica</a>
+      <a class="btn small" href="demos/fisio.html" id="lNew" target="_blank" rel="noopener">Probar el diseño completo</a>
+    </div>
+    <p class="fine" id="sectorNote">En el diseño de fisioterapia puedes reservar una cita de prueba.</p>
+  </div>
+</section>
+
+<section id="como" aria-labelledby="t-como" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="t-como">Cómo trabajamos</h2>
+    <p class="intro">Sin reuniones largas ni tecnicismos. Tú sigues con tu negocio y nosotros nos encargamos.</p>
+    <ol class="steps">
+      <li><h3>Auditoría gratis</h3><p>Revisamos tu web y tus redes y te enviamos qué te está haciendo perder clientes.</p></li>
+      <li><h3>Videollamada de 15 minutos</h3><p>Te enseñamos cómo quedaría tu web y te damos un precio cerrado. Sin compromiso.</p></li>
+      <li><h3>Web lista</h3><p>La montamos con tus fotos y textos, la revisas y la publicamos con tu dominio.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="audit" id="auditoria" aria-labelledby="t-auditoria">
+  <div class="wrap audit-grid">
+    <div>
+      <h2 id="t-auditoria">Pide tu auditoría gratis</h2>
+      <p class="intro">Déjanos tu web (o el nombre de tu negocio si no tienes) y en 24 horas te mandamos un análisis claro, sin letra pequeña.</p>
+      <ul>
+        <li>Qué ve un cliente cuando te busca en Google</li>
+        <li>Qué falla en tu web y en tus redes</li>
+        <li>Qué arreglaríamos primero</li>
+      </ul>
+    </div>
+    <form action="https://formsubmit.co/sifddinbenaamouch@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nueva solicitud de auditoría · Orvia">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row2">
+        <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Nombre del negocio<input name="negocio" required autocomplete="organization"></label>
+      </div>
+      <fieldset class="needs"><legend>¿Qué necesitas?</legend>
+        <label class="need"><input type="checkbox" name="Necesita: Web nueva" value="Sí"><span>Web nueva</span></label>
+        <label class="need"><input type="checkbox" name="Necesita: Mejorar mi web" value="Sí"><span>Mejorar mi web</span></label>
+        <label class="need"><input type="checkbox" name="Necesita: Vídeos y redes" value="Sí"><span>Vídeos y redes</span></label>
+        <label class="need"><input type="checkbox" name="Necesita: Google y reseñas" value="Sí"><span>Google y reseñas</span></label>
+        <label class="need"><input type="checkbox" name="Necesita: No lo sé" value="Sí"><span>No lo sé, aconsejadme</span></label>
+      </fieldset>
+      <label><span>Tu web <small>(si tienes)</small></span><input name="web" type="text" placeholder="www.tunegocio.com"></label>
+      <div class="row2">
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label><span>Teléfono <small>(opcional)</small></span><input name="telefono" type="tel" autocomplete="tel"></label>
+      </div>
+      <label><span>¿Algo que debamos saber? <small>(opcional)</small></span><textarea name="mensaje" placeholder="Por ejemplo: quiero que me reserven online"></textarea></label>
+      <button class="btn" type="submit">Enviar y recibir mi auditoría</button>
+      <p class="legal">Solo usamos tus datos para enviarte la auditoría y contactarte sobre ella.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><strong style="color:var(--ink)">orvia</strong>, webs y vídeos para negocios locales. Barcelona.</span>
+    <a href="mailto:sifddinbenaamouch@gmail.com">sifddinbenaamouch@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var a=document.getElementById('bAntes'),d=document.getElementById('bDespues'),
+      sA=document.getElementById('sAntes'),sD=document.getElementById('sDespues'),
+      url=document.getElementById('url'),touched=false;
+  function show(after){
+    sA.hidden=after; sD.hidden=!after;
+    a.setAttribute('aria-pressed',!after); d.setAttribute('aria-pressed',after);
+    url.textContent=after?'clinicadelbarrio.es':'clinicadelbarrio.wixsite.com/inicio-2016';
+  }
+  a.addEventListener('click',function(){touched=true;show(false)});
+  d.addEventListener('click',function(){touched=true;show(true)});
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){setTimeout(function(){if(!touched)show(true)},2600);}
+})();
+
+(function(){
+  /* self check */
+  var items=document.querySelectorAll('.pitem'),fill=document.getElementById('meterFill'),
+      txt=document.getElementById('verdictTxt'),btn=document.getElementById('verdictBtn');
+  var msgs=['Marca los que te pasan y te decimos cómo estás.','Un fallo. Se arregla rápido y se nota.','Dos fallos. Estás perdiendo clientes que ya te buscan.','Tres o más: tu web está trabajando en tu contra.'];
+  items.forEach(function(b){b.addEventListener('click',function(){
+    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');
+    var n=document.querySelectorAll('.pitem[aria-pressed="true"]').length;
+    fill.style.width=(n/items.length*100)+'%';
+    txt.textContent=msgs[Math.min(n,3)];btn.hidden=n===0;
+  })});
+
+  /* comparator */
+  var cmp=document.getElementById('compare'),fN=document.getElementById('fNew'),fO=document.getElementById('fOld'),
+      handle=document.getElementById('handle'),lO=document.getElementById('lOld'),lN=document.getElementById('lNew'),
+      note=document.getElementById('sectorNote'),pos=50,cur='fisio';
+  var notes={fisio:'En el diseño de fisioterapia puedes reservar una cita de prueba.',reformas:'En el diseño de reformas puedes calcular el precio de una obra y filtrar trabajos.',estetica:'En el diseño de estética puedes crear un bono regalo y ver los tratamientos por categoría.'};
+  function load(s){cur=s;fO.src='demos/antigua.html?s='+s+'&embed=1';fN.src='demos/'+s+'.html?embed=1';
+    lO.href='demos/antigua.html?s='+s;lN.href='demos/'+s+'.html';note.textContent=notes[s];}
+  function size(){var w=cmp.clientWidth,base=w<640?390:1280,sc=w/base,h=w<640?720:800;
+    [fN,fO].forEach(function(f){f.style.width=base+'px';f.style.height=h+'px';f.style.transform='scale('+sc+')'});
+    cmp.style.height=Math.round(h*sc)+'px';}
+  function set(p){pos=Math.max(0,Math.min(100,p));cmp.style.setProperty('--pos',pos+'%');handle.setAttribute('aria-valuenow',Math.round(pos))}
+  var drag=false;
+  function at(e){var r=cmp.getBoundingClientRect();set((e.clientX-r.left)/r.width*100)}
+  cmp.addEventListener('pointerdown',function(e){drag=true;cmp.classList.remove('hint');cmp.setPointerCapture(e.pointerId);at(e)});
+  cmp.addEventListener('pointermove',function(e){if(drag)at(e)});
+  cmp.addEventListener('pointerup',function(){drag=false});
+  cmp.addEventListener('pointercancel',function(){drag=false});
+  handle.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){set(pos-5);e.preventDefault()}if(e.key==='ArrowRight'){set(pos+5);e.preventDefault()}});
+  document.querySelectorAll('.sectors button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.sectors button').forEach(function(x){x.setAttribute('aria-selected',x===b)});load(b.dataset.s)})});
+  window.addEventListener('resize',size);size();load('fisio');set(50);
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){io.disconnect();
+    cmp.classList.add('hint');setTimeout(function(){set(78)},300);setTimeout(function(){set(22)},1100);setTimeout(function(){set(50)},1900);setTimeout(function(){cmp.classList.remove('hint')},2600);}},{threshold:.5});io.observe(cmp);}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Inicio | Bienvenidos</title>
+<style>
+body{margin:0;background:#e6e6e6;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#555;min-width:980px}
+a{color:#1e73be}
+.ribbon{background:#141A33;color:#fff;font:14px/1.4 Arial,sans-serif;text-align:center;padding:8px}
+.ribbon a{color:#9fb0ff}
+.embed .ribbon{display:none}
+.topbar{background:#f5f5f5;border-bottom:1px solid #ddd;font-size:11px;color:#777}
+.topbar .in{width:960px;margin:0 auto;display:flex;justify-content:space-between;padding:6px 0}
+.topbar .soc span{display:inline-block;width:18px;height:18px;background:#bbb;color:#fff;text-align:center;line-height:18px;margin-left:3px;font-weight:bold}
+.page{width:960px;margin:0 auto;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.2)}
+header{padding:22px 20px;display:flex;align-items:center;gap:14px}
+header .lg{width:54px;height:54px;border-radius:50%;background:#1e73be;color:#fff;font:bold 22px Georgia,serif;display:flex;align-items:center;justify-content:center}
+header h1{margin:0;font:bold 28px "Trebuchet MS",Arial,sans-serif;color:#1e73be}
+header p{margin:2px 0 0;font-style:italic;color:#888}
+nav{background:#1e73be;padding:0 10px}
+nav a{display:inline-block;color:#fff;text-decoration:none;text-transform:uppercase;font-size:12px;font-weight:bold;padding:12px 13px}
+nav a:first-child{background:#155a96}
+.slider{position:relative;height:300px;background:#999 center/cover no-repeat;overflow:hidden}
+.slider img{width:100%;height:300px;object-fit:cover;display:block;filter:saturate(.85)}
+.slider .cap{position:absolute;left:30px;bottom:30px;background:rgba(0,0,0,.55);color:#fff;padding:12px 18px;max-width:460px}
+.slider .cap b{display:block;font:bold 22px "Trebuchet MS",Arial}
+.slider .ar{position:absolute;top:130px;width:30px;height:40px;background:rgba(0,0,0,.4);color:#fff;font-size:24px;text-align:center;line-height:38px}
+.slider .l{left:0}.slider .r{right:0}
+.slider .dots{position:absolute;bottom:10px;right:20px}
+.slider .dots i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;opacity:.5;margin:0 2px}
+.slider .dots i:first-child{opacity:1}
+.cols{display:flex;gap:20px;padding:26px 20px;border-bottom:1px solid #eee}
+.col{flex:1;text-align:center}
+.col .ic{width:60px;height:60px;border-radius:50%;background:#eee;border:2px solid #1e73be;color:#1e73be;font-size:26px;line-height:58px;margin:0 auto 10px}
+.col h3{font:bold 15px Arial;color:#333;text-transform:uppercase;margin:0 0 8px}
+.col p{margin:0 0 10px;line-height:1.5}
+.more{display:inline-block;background:#ddd;color:#333;text-decoration:none;padding:5px 12px;font-size:11px;border:1px solid #ccc}
+.main{display:flex;gap:24px;padding:24px 20px}
+.content{flex:1}
+.content h2{font:normal 22px Georgia,serif;color:#333;border-bottom:1px dotted #ccc;padding-bottom:6px;margin:0 0 12px}
+.content p{line-height:1.6;text-align:justify}
+.content table{border-collapse:collapse;width:100%;margin:10px 0}
+.content td{border:1px solid #ddd;padding:6px;font-size:12px}
+aside{width:250px}
+.w{margin-bottom:22px}
+.w h4{background:#f0f0f0;border-left:3px solid #1e73be;margin:0 0 8px;padding:7px 9px;font-size:12px;text-transform:uppercase;color:#444}
+.w ul{margin:0;padding-left:16px;line-height:1.8}
+.w input{width:150px;border:1px solid #ccc;padding:4px}
+.w button{border:1px solid #bbb;background:#eee;padding:4px 8px}
+footer{background:#333;color:#aaa;padding:22px 20px;display:flex;gap:30px}
+footer div{flex:1;line-height:1.7}
+footer b{color:#fff;display:block;margin-bottom:6px;text-transform:uppercase;font-size:12px}
+.copy{background:#222;color:#888;text-align:center;padding:10px;font-size:11px}
+.cookie{position:fixed;left:0;right:0;bottom:0;background:#444;color:#eee;padding:10px 20px;font-size:12px;display:flex;justify-content:center;gap:16px;align-items:center}
+.cookie span{background:#1e73be;color:#fff;padding:4px 12px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="ribbon">Demo creada por Orvia: así son muchas webs antiguas. Negocio ficticio. <a href="../index.html#muestras">Volver a Orvia</a></div>
+<div class="topbar"><div class="in"><span>☎ <span id="tel"></span> &nbsp;|&nbsp; ✉ <span id="mail"></span></span><span class="soc"><span>f</span><span>t</span><span>g+</span></span></div></div>
+<div class="page">
+  <header><div class="lg" id="ini"></div><div><h1 id="name"></h1><p id="tag"></p></div></header>
+  <nav><a href="#">Inicio</a><a href="#">Quiénes somos</a><a href="#">Servicios ▾</a><a href="#">Galería</a><a href="#">Blog</a><a href="#">Noticias</a><a href="#">Contacto</a></nav>
+  <div class="slider"><img id="img" alt=""><div class="cap"><b id="capt"></b><span id="caps"></span></div><div class="ar l">‹</div><div class="ar r">›</div><div class="dots"><i></i><i></i><i></i></div></div>
+  <div class="cols" id="cols"></div>
+  <div class="main">
+    <div class="content">
+      <h2>Bienvenidos a nuestra página web</h2>
+      <p id="p1"></p>
+      <p>Nuestro objetivo es ofrecer un servicio de calidad, profesional y personalizado, adaptándonos siempre a las necesidades de cada cliente. Contamos con un equipo de profesionales altamente cualificados y con las últimas técnicas del sector. No dude en contactar con nosotros para cualquier consulta, estaremos encantados de atenderle.</p>
+      <p>Para pedir cita, llámenos por teléfono en horario de oficina o envíenos un correo electrónico y le responderemos lo antes posible.</p>
+      <table id="tabla"></table>
+    </div>
+    <aside>
+      <div class="w"><h4>Buscar</h4><input> <button>Buscar</button></div>
+      <div class="w"><h4>Entradas recientes</h4><ul id="posts"></ul></div>
+      <div class="w"><h4>Archivos</h4><ul><li><a href="#">mayo 2019</a></li><li><a href="#">noviembre 2018</a></li><li><a href="#">marzo 2018</a></li></ul></div>
+      <div class="w"><h4>Categorías</h4><ul><li><a href="#">Noticias</a></li><li><a href="#">Sin categoría</a></li></ul></div>
+    </aside>
+  </div>
+  <footer><div><b>Contacto</b><span id="fdir"></span><br>Tel: <span id="ftel"></span></div><div><b>Horario</b>Lunes a viernes<br>9:00 a 13:00 y 16:00 a 20:00</div><div><b>Síguenos</b>Facebook<br>Twitter<br>Google+</div></footer>
+  <div class="copy">© 2017 <span id="fname"></span> | Todos los derechos reservados | Funciona con WordPress | Tema: Business Pro</div>
+</div>
+<div class="cookie">Este sitio web utiliza cookies para mejorar su experiencia. Si continúa navegando acepta su uso. <span>ACEPTAR</span> <a href="#" style="color:#ccc">Leer más</a></div>
+<script>
+var D={
+ fisio:{name:"Fisioterapia Kinesia",ini:"K",tag:"Centro de fisioterapia y rehabilitación",tel:"93 000 00 00",mail:"info@fisiokinesia.com",
+  img:"1645005512968-0c1fe99f0093",capt:"Bienvenidos a Fisioterapia Kinesia",caps:"Su centro de fisioterapia de confianza",
+  cols:[["✚","Fisioterapia","Tratamos todo tipo de lesiones y dolencias con las técnicas más avanzadas."],["☯","Osteopatía","Tratamiento global del cuerpo para mejorar su salud y bienestar."],["♥","Pilates","Clases de pilates en grupos reducidos para todas las edades."]],
+  p1:"Fisioterapia Kinesia es un centro de fisioterapia con más de 15 años de experiencia en el sector. Ofrecemos tratamientos de fisioterapia, osteopatía, pilates y punción seca para todo tipo de pacientes.",
+  tabla:[["Fisioterapia","Consultar"],["Osteopatía","Consultar"],["Pilates","Consultar"]],
+  posts:["Consejos para el dolor de espalda","Nuevo horario de verano","Ya tenemos pilates"]},
+ reformas:{name:"Vidal Reformas",ini:"V",tag:"Reformas en general, baños y cocinas",tel:"93 000 00 00",mail:"vidalreformas@gmail.com",
+  img:"1517581177682-a085bb7ffb15",capt:"Vidal Reformas",caps:"Calidad y profesionalidad en todas nuestras obras",
+  cols:[["⌂","Reformas integrales","Realizamos todo tipo de reformas de pisos, locales y casas."],["◧","Baños","Reforma de baños completa, cambio de bañera por plato de ducha."],["▤","Cocinas","Reforma y montaje de cocinas a medida con los mejores materiales."]],
+  p1:"Vidal Reformas es una empresa dedicada al sector de la construcción y las reformas con una amplia experiencia. Realizamos reformas integrales, baños, cocinas, pintura, electricidad y fontanería.",
+  tabla:[["Presupuesto","Sin compromiso"],["Zona","Barcelona y alrededores"],["Garantía","Consultar"]],
+  posts:["Fotos obra calle Mallorca","Ideas para reformar su baño","Feliz Navidad"]},
+ estetica:{name:"Aura Estètica",ini:"A",tag:"Centro de estética y belleza",tel:"93 000 00 00",mail:"auraestetica@hotmail.com",
+  img:"1570172619644-dfd03ed5d881",capt:"Aura Estètica",caps:"Su centro de belleza y bienestar",
+  cols:[["✿","Tratamientos faciales","Higiene facial, peeling y tratamientos antiedad para todo tipo de pieles."],["❀","Corporales","Masajes, presoterapia y tratamientos reductores."],["✂","Depilación","Depilación con cera y fotodepilación para hombre y mujer."]],
+  p1:"Aura Estètica es un centro de estética con más de 20 años de experiencia. Ofrecemos tratamientos faciales, corporales, depilación, manicura y pedicura en un ambiente agradable.",
+  tabla:[["Promoción del mes","Consultar"],["Bonos regalo","Disponibles"],["Cita previa","Por teléfono"]],
+  posts:["Promoción de primavera","Bonos regalo para el Día de la Madre","Cerrado por vacaciones"]}
+};
+var q=new URLSearchParams(location.search),s=D[q.get('s')]||D.fisio;
+if(q.get('embed'))document.documentElement.classList.add('embed');
+function $(i){return document.getElementById(i)}
+document.title="Inicio | "+s.name;
+$('name').textContent=s.name;$('fname').textContent=s.name;$('ini').textContent=s.ini;$('tag').textContent=s.tag;
+$('tel').textContent=s.tel;$('ftel').textContent=s.tel;$('mail').textContent=s.mail;$('fdir').textContent="C/ Ejemplo, 12, Barcelona";
+$('img').src="https://images.unsplash.com/photo-"+s.img+"?w=960&q=45&auto=format&fit=crop";
+$('capt').textContent=s.capt;$('caps').textContent=s.caps;$('p1').textContent=s.p1;
+$('cols').innerHTML=s.cols.map(function(c){return '<div class="col"><div class="ic">'+c[0]+'</div><h3>'+c[1]+'</h3><p>'+c[2]+'</p><a class="more" href="#">Leer más »</a></div>'}).join('');
+$('tabla').innerHTML=s.tabla.map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>'}).join('');
+$('posts').innerHTML=s.posts.map(function(p){return '<li><a href="#">'+p+'</a></li>'}).join('');
+</script>
+</body>
+</html>
