@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /demos/
+
+Sitemap: https://orviagency.com/sitemap.xml
